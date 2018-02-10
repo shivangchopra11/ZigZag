@@ -54,6 +54,7 @@ public class BallController : MonoBehaviour {
 			GameObject part = Instantiate (particle, col.gameObject.transform.position, Quaternion.identity) as GameObject;
 			Destroy (col.gameObject);
 			Destroy (part, 1f);
+			ScoreManager.instance.DiamandScore ();
 		}
 
 	}

@@ -14,6 +14,12 @@ public class ScoreManager : MonoBehaviour {
 
 	void IncrementScore() {
 		score++;
+		UiManager.instance.gameScore.text = "Score : " + score.ToString ();
+	}
+
+	public void DiamandScore() {
+		score+=10;
+		UiManager.instance.gameScore.text = "Score : " + score.ToString ();
 	}
 
 

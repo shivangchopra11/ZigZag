@@ -9,6 +9,7 @@ public class UiManager : MonoBehaviour {
 	public GameObject zigZagPanel;
 	public GameObject gameOverPanel;
 	public GameObject tapText;
+	public Text gameScore;
 	public Text score;
 	public Text highScore1;
 	public Text highScore2;
@@ -25,6 +26,7 @@ public class UiManager : MonoBehaviour {
 	}
 
 	public void GameStart() {
+		gameScore.text = "Score : 0";
 		tapText.SetActive (false);
 		zigZagPanel.GetComponent<Animator> ().Play ("PanelUp");
 	}
@@ -33,6 +35,7 @@ public class UiManager : MonoBehaviour {
 		score.text = PlayerPrefs.GetInt ("score").ToString();
 		highScore2.text = PlayerPrefs.GetInt ("highScore").ToString();
 		gameOverPanel.SetActive (true);
+		gameScore.text = "";
 
 	
 	}
