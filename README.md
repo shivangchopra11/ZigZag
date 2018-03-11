@@ -1,4 +1,4 @@
-#ZigZag
+# ZigZag
 
 
 >This is a simple android game. The goal is to keep the ball on the track and collect as many diamonds as you can.
